@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: Configuration table
+      author: example
+      changes:
+        - createTable:
+            tableName: PROPERTIES
+            columns:
+              - column:
+                  name: ID
+                  type: UUID
+                  defaultValueComputed: RANDOM_UUID()
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: APPLICATION
+                  type: VARCHAR(255)
+              - column:
+                  name: PROFILE
+                  type: VARCHAR(255)
+              - column:
+                  name: LABEL
+                  type: VARCHAR(255)
+              - column:
+                  name: KEY
+                  type: VARCHAR(255)
+              - column:
+                  name: VALUE
+                  type: VARCHAR(4000)

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo
+  profiles:
+    active: jdbc
+  cloud:
+    config:
+      server:
+        bootstrap: true
+
+demo:
+  mutable:
+    value: 1
+  immutable:
+    value: 1
