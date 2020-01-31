@@ -3,6 +3,8 @@
 Sample spring cloud remote config project to demonstrate issue with context refresh for immutable
 @ConfigurationProperties created with @ConstructorBinding.
 
+Linked issue at [https://github.com/spring-cloud/spring-cloud-config/issues/1547.](https://github.com/spring-cloud/spring-cloud-config/issues/1547)
+
 The Spring application uses an embedded spring-cloud-config-server with JDBC repository as its backend.
 
 In the main application context, 2 @ConfigurationProperties are defined.
@@ -44,4 +46,3 @@ $ cd spring-remote-config
 ```bash
 $ ./gradlew check
 ```
-
